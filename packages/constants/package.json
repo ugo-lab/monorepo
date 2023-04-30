@@ -1,19 +1,18 @@
 {
-  "name": "@monorepo/ui",
+  "name": "@monorepo/constants",
   "version": "0.0.0",
-  "main": "./index.tsx",
-  "types": "./index.tsx",
+  "main": "constants.js",
+  "types": "constants.d.ts",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "lint": "eslint \"**/*.ts\""
   },
   "devDependencies": {
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
     "eslint": "^7.32.0",
     "@monorepo/eslint-config-custom": "workspace:*",
-    "react": "^17.0.2",
     "@monorepo/tsconfig": "workspace:*",
+    "@monorepo/types": "workspace:*",
     "typescript": "^4.5.2"
   }
 }
