@@ -14,4 +14,4 @@ This Turborepo includes the following packages and apps:
 - `eslint-config-custom`: shared `eslint` configurations
 - `tsconfig`: all `tsconfig.json` files used throughout the monorepo
 
-Each package and app is 100% [TypeScript](https://www.typescriptlang.org/).
+Each package and app is 100% [TypeScript](https://www.typescriptlang.org/) 🥰
