@@ -7,6 +7,9 @@
   "scripts": {
     "lint": "eslint \"**/*.ts\""
   },
+  "dependencies": {
+    "@monorepo/constants": "workspace:*"
+  },
   "devDependencies": {
     "eslint": "^7.32.0",
     "@monorepo/eslint-config-custom": "workspace:*",

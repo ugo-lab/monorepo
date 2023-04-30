@@ -1,4 +1,3 @@
-import { MyButton } from '@monorepo/ui';
 import { IUser } from '@monorepo/types';
 
 function App() {
@@ -11,8 +10,7 @@ function App() {
 
   return (
     <div>
-      yo
-      <MyButton />
+      <h1>Front</h1>
     </div>
   );
 }

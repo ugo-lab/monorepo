@@ -22,6 +22,9 @@ importers:
       '@monorepo/constants':
         specifier: workspace:*
         version: link:../../packages/constants
+      '@monorepo/utils':
+        specifier: workspace:*
+        version: link:../../packages/utils
       cors:
         specifier: ^2.8.5
         version: 2.8.5
@@ -80,9 +83,6 @@ importers:
       '@monorepo/constants':
         specifier: workspace:*
         version: link:../../packages/constants
-      '@monorepo/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -145,24 +145,6 @@ importers:
         specifier: ^4.5.2
         version: 4.9.4
 
-  packages/constants-ts:
-    devDependencies:
-      '@monorepo/eslint-config-custom':
-        specifier: workspace:*
-        version: link:../eslint-config-custom
-      '@monorepo/tsconfig':
-        specifier: workspace:*
-        version: link:../tsconfig
-      '@monorepo/types':
-        specifier: workspace:*
-        version: link:../types
-      eslint:
-        specifier: ^7.32.0
-        version: 7.32.0
-      typescript:
-        specifier: ^4.5.2
-        version: 4.9.4
-
   packages/eslint-config-custom:
     dependencies:
       '@typescript-eslint/eslint-plugin':
@@ -192,31 +174,11 @@ importers:
         specifier: ^4.5.2
         version: 4.9.4
 
-  packages/ui:
-    devDependencies:
-      '@monorepo/eslint-config-custom':
-        specifier: workspace:*
-        version: link:../eslint-config-custom
-      '@monorepo/tsconfig':
-        specifier: workspace:*
-        version: link:../tsconfig
-      '@types/react':
-        specifier: ^18.2.0
-        version: 18.2.0
-      '@types/react-dom':
-        specifier: ^18.2.0
-        version: 18.2.0
-      eslint:
-        specifier: ^7.32.0
-        version: 7.32.0
-      react:
-        specifier: ^17.0.2
-        version: 17.0.2
-      typescript:
-        specifier: ^4.5.2
-        version: 4.9.4
-
   packages/utils:
+    dependencies:
+      '@monorepo/constants':
+        specifier: workspace:*
+        version: link:../constants
     devDependencies:
       '@monorepo/eslint-config-custom':
         specifier: workspace:*
@@ -891,22 +853,8 @@ packages:
       '@types/react': 18.0.28
     dev: true
 
-  /@types/react-dom@18.2.0:
-    resolution: {integrity: sha512-8yQrvS6sMpSwIovhPOwfyNf2Wz6v/B62LFSVYQ85+Rq3tLsBIG7rP5geMxaijTUxSkrO6RzN/IRuIAADYQsleA==}
-    dependencies:
-      '@types/react': 18.2.0
-    dev: true
-
   /@types/react@18.0.28:
     resolution: {integrity: sha512-RD0ivG1kEztNBdoAK7lekI9M+azSnitIn85h4iOiaLjaTrMjzslhaqCGaI4IyCJ1RljWiLCEu4jyrLLgqxBTew==}
-    dependencies:
-      '@types/prop-types': 15.7.5
-      '@types/scheduler': 0.16.3
-      csstype: 3.1.2
-    dev: true
-
-  /@types/react@18.2.0:
-    resolution: {integrity: sha512-0FLj93y5USLHdnhIhABk83rm8XEGA7kH3cr+YUlvxoUGp1xNt/DINUMvqPxLyOQMzLmZe8i4RTHbvb8MC7NmrA==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.3
@@ -2228,6 +2176,7 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
+    dev: false
 
   /lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
@@ -2411,6 +2360,7 @@ packages:
   /object-assign@4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
     engines: {node: '>=0.10.0'}
+    dev: false
 
   /object-inspect@1.12.3:
     resolution: {integrity: sha512-geUvdk7c+eizMNUDkRpW1wJwgfOiOeHbxBR/hLXK1aT6zmVSO0jsQcs7fj6MGw89jC/cjGfLcNOrtMYtGqm81g==}
@@ -2590,14 +2540,6 @@ packages:
   /react-refresh@0.14.0:
     resolution: {integrity: sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==}
     engines: {node: '>=0.10.0'}
-    dev: true
-
-  /react@17.0.2:
-    resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==}
-    engines: {node: '>=0.10.0'}
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
     dev: true
 
   /react@18.2.0:

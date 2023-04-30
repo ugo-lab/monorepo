@@ -1,8 +1,11 @@
 import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
+import dotenv from 'dotenv';
 import { MORGAN_DEV_FORMAT, BACK_PORT } from '@monorepo/constants';
 import { IUser } from '@monorepo/types';
+
+dotenv.config();
 
 const app = express();
 app.use(express.json());

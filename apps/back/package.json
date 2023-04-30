@@ -15,7 +15,8 @@
     "express": "^4.18.2",
     "mongoose": "^7.0.5",
     "morgan": "^1.10.0",
-    "@monorepo/constants": "workspace:*"
+    "@monorepo/constants": "workspace:*",
+    "@monorepo/utils": "workspace:*"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^5.57.1",
