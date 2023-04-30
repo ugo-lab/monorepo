@@ -10,6 +10,7 @@ This Turborepo includes the following packages and apps:
 - `back`: a nodejs, express, ts API
 - `constants`: all constants shared in the whole monorepo
 - `types`: all types shared in the whole monorepo
+- `utils`: all common functions shared in the whole monorepo
 - `eslint-config-custom`: shared `eslint` configurations
 - `tsconfig`: all `tsconfig.json` files used throughout the monorepo
 
