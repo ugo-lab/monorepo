@@ -1,8 +1,6 @@
-import { Role } from '@monorepo/types';
+export const BACK_PORT = 4000;
+export const BACK_DEV_URL = 'http://localhost:4000';
+export const BACK_PROD_URL = 'https://api.example.com';
 
-export const BACK_PORT: number;
-export const BACK_DEV_URL: string;
-export const BACK_PROD_URL: string;
-
-export const MORGAN_DEV_FORMAT: string;
-export const DEFAULT_USER_ROLE: Role;
+export const MORGAN_DEV_FORMAT = 'dev';
+export const DEFAULT_USER_ROLE = 'user';

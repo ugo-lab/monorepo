@@ -1,9 +1,10 @@
 {
   "name": "@monorepo/utils",
   "version": "0.0.0",
-  "main": "./index.ts",
-  "types": "./index.ts",
+  "main": "index.js",
+  "types": "index.d.ts",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "lint": "eslint \"**/*.ts\""
   },
@@ -11,9 +12,9 @@
     "@monorepo/constants": "workspace:*"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
     "@monorepo/eslint-config-custom": "workspace:*",
     "@monorepo/tsconfig": "workspace:*",
+    "eslint": "^7.32.0",
     "typescript": "^4.5.2"
   }
 }

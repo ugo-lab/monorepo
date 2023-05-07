@@ -4,6 +4,7 @@ import morgan from 'morgan';
 import dotenv from 'dotenv';
 import { MORGAN_DEV_FORMAT, BACK_PORT } from '@monorepo/constants';
 import { IUser } from '@monorepo/types';
+import { getBackUrl } from '@monorepo/utils';
 
 dotenv.config();
 
@@ -17,6 +18,10 @@ const user: IUser = {
   age: 30,
   role: 'user'
 };
+
+const env = process.env.ENV;
+const backUrl = getBackUrl(env);
+console.log({ backUrl });
 
 app.listen(BACK_PORT, () => {
   console.log(`⚡️ Server listening on port ${BACK_PORT}`);
